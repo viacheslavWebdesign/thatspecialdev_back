@@ -1,0 +1,133 @@
+:root {
+  --custom-block-background: #f5f7f7;
+  --custom-card-background: #fff;
+  --custom-button-background: #c3c4c7;
+  --custom-error-color: #cc1818;
+  --custom-gallery-item-background: #c6d8ec;
+}
+
+.custom-block {
+  background: var(--custom-block-background);
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.custom-block h2 {
+  margin-top: 0;
+}
+
+.custom-block-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.custom-block-cardlist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.custom-block-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.custom-block-card {
+  background: var(--custom-card-background);
+  border-radius: 4px;
+  padding: 16px 16px 32px;
+  position: relative;
+}
+
+.custom-block-gallery-item {
+  position: relative;
+  width: calc((100% - 30px) / 4);
+  background: var(--custom-gallery-item-background);
+}
+
+.custom-block-gallery-item-body {
+  padding: 8px 8px 32px;
+}
+
+.custom-block-link {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  color: #007cba;
+  font-size: 12px;
+}
+
+.custom-block-link p {
+  white-space: nowrap !important;
+}
+
+.custom-block-remove-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.custom-block-add-card {
+  margin-top: 28px;
+}
+
+.custom-block-image,
+.custom-block-gallery-image {
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+}
+
+.custom-block-image::before,
+.custom-block-gallery-image::before {
+  content: "";
+  position: relative;
+  display: block;
+  padding-top: 56.25%;
+}
+
+.custom-block-image img,
+.custom-block-gallery-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.custom-block-image .custom-block-error,
+.custom-block-gallery-image .custom-block-error {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align: center;
+  width: 100%;
+}
+
+.custom-block-image button,
+.custom-block-gallery-image button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.custom-block-error {
+  color: var(--custom-error-color);
+  font-size: 12px;
+}
+
+.custom-block-button p {
+  display: inline-block;
+  background: var(--custom-button-background);
+  border-radius: 2px;
+  padding: 4px 16px;
+}

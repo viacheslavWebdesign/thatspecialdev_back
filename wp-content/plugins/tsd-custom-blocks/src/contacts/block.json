@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/contacts",
+  "version": "6.6.6",
+  "title": "Contacts",
+  "category": "custom-blocks",
+  "icon": "smiley",
+  "attributes": {
+    "slides": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string",
+            "default": ""
+          },
+          "highlighted": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    },
+    "details": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "default": ""
+            },
+            "alt": {
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "requisites": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "type": {
+                "type": "string",
+                "default": ""
+              },
+              "link": {
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "contacts",
+  "editorScript": "file:./index.js"
+}

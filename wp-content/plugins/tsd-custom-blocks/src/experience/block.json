@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/experience",
+  "version": "6.6.6",
+  "title": "Experience",
+  "category": "custom-blocks",
+  "icon": "smiley",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "jobs": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "image": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "default": ""
+              },
+              "alt": {
+                "type": "string",
+                "default": ""
+              }
+            }
+          },
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "date": {
+            "type": "string",
+            "default": ""
+          },
+          "text": {
+            "type": "string",
+            "default": ""
+          },
+          "projects": {
+            "type": "array",
+            "default": [],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "image": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "default": ""
+                    },
+                    "alt": {
+                      "type": "string",
+                      "default": ""
+                    }
+                  }
+                },
+                "link": {
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "experience",
+  "editorScript": "file:./index.js"
+}

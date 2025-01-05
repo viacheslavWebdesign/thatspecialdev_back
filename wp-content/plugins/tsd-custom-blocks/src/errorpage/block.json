@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/errorpage",
+  "version": "6.6.6",
+  "title": "404",
+  "category": "custom-blocks",
+  "icon": "smiley",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "errorPage",
+  "editorScript": "file:./index.js"
+}

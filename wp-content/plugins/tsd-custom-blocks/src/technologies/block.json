@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/technologies",
+  "version": "6.6.6",
+  "title": "Technologies",
+  "category": "custom-blocks",
+  "icon": "smiley",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "technologies": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "image": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "default": ""
+              },
+              "alt": {
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "technologies",
+  "editorScript": "file:./index.js"
+}
