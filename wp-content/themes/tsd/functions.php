@@ -39,3 +39,10 @@ function add_translations_to_api_response($data, $post, $context) {
 
 add_filter('rest_prepare_post', 'add_translations_to_api_response', 10, 3);
 add_filter('rest_prepare_page', 'add_translations_to_api_response', 10, 3);
+
+function allow_requests_cors() {
+	header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Methods: GET");
+	header("Access-Control-Allow-Headers: Content-Type");
+}
+add_action('init', 'allow_requests_cors');
